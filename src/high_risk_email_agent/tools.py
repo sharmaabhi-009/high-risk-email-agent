@@ -35,8 +35,8 @@ async def fun_raise_high_risk_alert(
     # --- SMTP Configuration ---
     SMTP_SERVER = "smtp.gmail.com"
     SMTP_PORT = 587
-    SMTP_USER = "sharmaabhi.009@gmail.com"   # Replace with your Outlook/Hotmail email
-    SMTP_PASSWORD = "ngpj grob yyzb girm"        # Or app password if MFA enabled
+    SMTP_USER = "XXXXXXXx"   # Replace with your Outlook/Hotmail email
+    SMTP_PASSWORD = "XXXXXX"        # Or app password if MFA enabled
 
     
     
@@ -47,7 +47,7 @@ async def fun_raise_high_risk_alert(
     log.info(f"[HistoryAgentExecutor] Fetching data for customer_id={customer_id}")
     # --- Email Content ---
     from_email = SMTP_USER
-    to_email = "abhishek.sharma@solace.com"
+    to_email = "XXXXXXX"
     subject = "Alert !!! High Risk Transaction Email Alert"
     #body = "Hello,\n\nThis is a test email sent from Python using Outlook SMTP!"
 
