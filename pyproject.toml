@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.high_risk_email_agent.metadata]
+type = "agent"
+
+[project]
+name = "high_risk_email_agent"
+version = "0.1.0"
+authors = [
+  { name="abhishek.sharma@solace.com", email="abhishek.sharma@solace.com" },
+]
+description = "A SAM plugin: high risk email agent"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "solace_agent_mesh~=1.0.2",
+    # Add plugin-specific dependencies here
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/high_risk_email_agent"]
+src-path = "src"
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/high_risk_email_agent" = "high_risk_email_agent/"
+"config.yaml" = "high_risk_email_agent/config.yaml"
+"README.md" = "high_risk_email_agent/README.md"
+"pyproject.toml" = "high_risk_email_agent/pyproject.toml"
